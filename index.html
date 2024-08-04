@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework-3.2</title>
+  </head>
+  <body>
+    <script>
+      function fisherYatesShuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      let string0 = prompt("Введіть перший рядок:");
+      let string1 = prompt("Введіть другий рядок:");
+      let string2 = prompt("Введіть третій рядок:");
+
+      // Масив для збереження рядків
+      let strings = [string0, string1, string2];
+
+      // Перемішування масиву за допомогою алгоритму Фішера-Йетса  (не могу понять как выводить рандомные рядки при каждом обращении к strings)
+      fisherYatesShuffle(strings);
+
+      console.log(
+        `Рядки у довільному порядку: ${strings[0]}, ${strings[1]}, ${strings[2]}`
+      );
+    </script>
+  </body>
+</html>
